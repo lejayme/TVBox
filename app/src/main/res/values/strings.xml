@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">TVBox</string>
     <string name="app_home">Home</string>
+    <string name="hm_douban">Douban(yong)</string>
     <string name="app_source"></string>
 
     // Home Page //

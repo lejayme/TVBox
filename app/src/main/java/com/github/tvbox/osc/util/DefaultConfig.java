@@ -61,6 +61,8 @@ public class DefaultConfig {
         }
         if (withMy)
             data.add(0, new MovieSort.SortData("my0", HomeActivity.getRes().getString(R.string.app_home)));
+
+        data.add(1, new MovieSort.SortData("my1", HomeActivity.getRes().getString(R.string.hm_douban)));
         Collections.sort(data);
         return data;
     }

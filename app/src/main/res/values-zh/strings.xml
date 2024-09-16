@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">TVBox</string>
     <string name="app_home">首页</string>
+    <string name="hm_douban">豆瓣</string>
     <string name="app_source"></string>
 
     // Home Page //

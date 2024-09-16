@@ -17,6 +17,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +50,7 @@ import com.github.tvbox.osc.ui.adapter.SelectDialogAdapter;
 import com.github.tvbox.osc.ui.adapter.SortAdapter;
 import com.github.tvbox.osc.ui.dialog.SelectDialog;
 import com.github.tvbox.osc.ui.dialog.TipDialog;
+import com.github.tvbox.osc.ui.fragment.DoubanFragment;
 import com.github.tvbox.osc.ui.fragment.GridFragment;
 import com.github.tvbox.osc.ui.fragment.UserFragment;
 import com.github.tvbox.osc.ui.tv.widget.DefaultTransformer;
@@ -397,8 +399,8 @@ public class HomeActivity extends BaseActivity {
             }
         }
 
-        // takagen99: Set Style either Grid or Line
-        if (Hawk.get(HawkConfig.HOME_REC_STYLE, false)) {
+        // takagen99: Set Style either Grid or Line, default Grid
+        if (Hawk.get(HawkConfig.HOME_REC_STYLE, true)) {
             tvStyle.setImageResource(R.drawable.hm_up_down);
         } else {
             tvStyle.setImageResource(R.drawable.hm_left_right);
@@ -559,6 +561,8 @@ public class HomeActivity extends BaseActivity {
                     } else {
                         fragments.add(UserFragment.newInstance(null));
                     }
+                } else if (data.id.equals("my1")) {
+                    fragments.add(DoubanFragment.newInstance(null));
                 } else {
                     fragments.add(GridFragment.newInstance(data));
                 }
